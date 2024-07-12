@@ -10,12 +10,9 @@ packages = [{include="app"}]
 python = "^3.12"
 beautifulsoup4 = "^4.12.3"
 python-docx = "^1.1.2"
-docformatter = "^1.7.5"
-
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.4.2"
-docformatter = "^1.7.5"
 
 [build-system]
 requires = ["poetry-core"]
@@ -23,3 +20,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.black]
 line-length = 79
+
+[tool.docformatter]
+wrap-summaries = 73
+wrap-descriptions = 73
