@@ -103,9 +103,14 @@ def remove_first_column_borders(table: Table) -> None:
         tcPr = cell._element.get_or_add_tcPr()
         tcPr.append(
             parse_xml(
-                r'<w:tcBorders {}><w:top w:val="nil"/><w:left w:val="nil"/><w:bottom w:val="nil"/><w:right w:val="single"/></w:tcBorders>'.format(
-                    nsdecls("w")
-                )
+                (
+                    "<w:tcBorders {}>"
+                    '<w:top w:val="nil"/>'
+                    '<w:left w:val="nil"/>'
+                    '<w:bottom w:val="nil"/>'
+                    '<w:right w:val="single"/>'
+                    "</w:tcBorders>"
+                ).format(nsdecls("w"))
             )
         )
 
@@ -119,9 +124,7 @@ def color_table_cell(table: Table, row_idx: int, col_idx: int) -> None:
     """
     cell_to_color = table.rows[row_idx].cells[col_idx]
     tcPr = cell_to_color._element.get_or_add_tcPr()
-    tcPr.append(
-        parse_xml(r'<w:shd {} w:fill="FFFF00"/>'.format(nsdecls("w")))
-    )  # Желтый цвет
+    tcPr.append(parse_xml(r'<w:shd {} w:fill="FFFF00"/>'.format(nsdecls("w"))))
 
 
 def write_to_docx(

@@ -4,10 +4,10 @@ from app.data_extractor import TableData
 
 
 def create_header(table_data: TableData, coefficients: List[int]) -> List[str]:
-    """Создает заголовок таблицы на основе исходных данных и коэффициентов.
+    """Создает заголовок таблицы на основе исходных данных и
+    коэффициентов.
 
-    :param table_data: Объект TableData, представляющий исходную
-        таблицу.
+    :param table_data: Объект TableData, представляющий исходную таблицу.
     :param coefficients: Список целых чисел, представляющий коэффициенты
         для добавления в заголовок.
     :return: Список строк, представляющий заголовок таблицы.
@@ -23,8 +23,7 @@ def create_header(table_data: TableData, coefficients: List[int]) -> List[str]:
 def create_variable_header(table_data: TableData) -> List[str]:
     """Создает переменный заголовок таблицы B, A0, A1, A2 и т.д.
 
-    :param table_data: Объект TableData, представляющий исходную
-        таблицу.
+    :param table_data: Объект TableData, представляющий исходную таблицу.
     :return: Список строк, представляющий переменный заголовок таблицы.
     """
     variable_header = ["B", "A0"] + [
@@ -51,11 +50,11 @@ def insert_first_element(row: List[str], coefficients: List[int]) -> None:
 
 
 def update_colored_cells_if_match(table_data: TableData) -> None:
-    """Обновляет список цветовых ячеек в объекте TableData на основе текущих
-    данных таблицы.
+    """Обновляет список цветовых ячеек в объекте TableData на основе
+    текущих данных таблицы.
 
-    Проверяет каждый объект цветовой ячейки из table_data.colored_cells
-    и ищет соответствующие значения в table_data.rows. Если найдено
+    Проверяет каждый объект цветовой ячейки из table_data.colored_cells и
+    ищет соответствующие значения в table_data.rows. Если найдено
     совпадение, обновляет список colored_cells.
 
     :param table_data: Объект TableData, представляющий данные таблицы.
@@ -84,8 +83,7 @@ def transform_table(
     """Преобразует данные таблицы с учетом коэффициентов и создает новую
     таблицу с заголовком.
 
-    :param table_data: Объект TableData, представляющий исходную
-        таблицу.
+    :param table_data: Объект TableData, представляющий исходную таблицу.
     :param coefficients: Список целых чисел, представляющий коэффициенты
         для добавления в заголовок.
     :return: Список списков строк (List[List[str]]), представляющий

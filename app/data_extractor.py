@@ -9,7 +9,8 @@ class TableData:
     """Класс для представления данных таблицы."""
 
     def __init__(self, header, rows):
-        """Инициализирует объект TableData с заголовком и строками таблицы.
+        """Инициализирует объект TableData с заголовком и строками
+        таблицы.
 
         :param header: Список заголовков столбцов таблицы.
         :param rows: Список списков, представляющих строки таблицы.
@@ -32,8 +33,8 @@ class TableData:
     def update_colored_cells(self, new_colored_cells):
         """Обновляет список colored_cells.
 
-        :param new_colored_cells: Новый список значений закрашенных
-            ячеек (без индексов).
+        :param new_colored_cells: Новый список значений закрашенных ячеек
+            (без индексов).
         """
         self.colored_cells = new_colored_cells
 
@@ -59,12 +60,11 @@ def extract_coefficients_from_soup(soup: BeautifulSoup) -> List[int]:
 
 def find_tables_with_red_highlight(soup: BeautifulSoup) -> List[TableData]:
     """Находит таблицы с красным выделением в HTML-разметке и сохраняет
-    информацию о цветовых ячейках, исключая ячейки из последнего столбца с
-    заголовком "min".
+    информацию о цветовых ячейках, исключая ячейки из последнего столбца
+    с заголовком "min".
 
     :param soup: Объект BeautifulSoup, представляющий HTML-разметку.
-    :return: Список объектов TableData, представляющих найденные
-        таблицы.
+    :return: Список объектов TableData, представляющих найденные таблицы.
     """
     tables = soup.find_all("table")
     table_data_list = []
@@ -99,7 +99,8 @@ def find_tables_with_red_highlight(soup: BeautifulSoup) -> List[TableData]:
 
 
 def find_last_table(soup: BeautifulSoup) -> TableData:
-    """Находит последнюю таблицу в HTML-разметке, следующую за ключевой фразой.
+    """Находит последнюю таблицу в HTML-разметке, следующую за ключевой
+    фразой.
 
     :param soup: Объект BeautifulSoup, представляющий HTML-разметку.
     :return: Объект TableData, представляющий последнюю найденную
@@ -159,8 +160,8 @@ def process_html_file(html_file: str) -> Tuple[List[TableData], List[int]]:
 def process_html_folder(
     folder_path: str,
 ) -> Dict[str, Tuple[List[TableData], List[int]]]:
-    """Обрабатывает все HTML-файлы в указанной папке, извлекает данные таблиц и
-    коэффициенты для каждого файла.
+    """Обрабатывает все HTML-файлы в указанной папке, извлекает данные
+    таблиц и коэффициенты для каждого файла.
 
     :param folder_path: Путь к папке с HTML-файлами для обработки.
     :return: Словарь, где ключ - имя файла, значение - кортеж из списка объектов
