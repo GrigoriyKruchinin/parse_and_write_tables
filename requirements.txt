@@ -1,0 +1,8 @@
+beautifulsoup4==4.12.3 ; python_version >= "3.12" and python_version < "4.0"
+charset-normalizer==3.3.2 ; python_version >= "3.12" and python_version < "4.0"
+docformatter==1.7.5 ; python_version >= "3.12" and python_version < "4.0"
+lxml==5.2.2 ; python_version >= "3.12" and python_version < "4.0"
+python-docx==1.1.2 ; python_version >= "3.12" and python_version < "4.0"
+soupsieve==2.5 ; python_version >= "3.12" and python_version < "4.0"
+typing-extensions==4.12.2 ; python_version >= "3.12" and python_version < "4.0"
+untokenize==0.1.1 ; python_version >= "3.12" and python_version < "4.0"
